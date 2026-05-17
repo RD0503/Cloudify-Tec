@@ -1,0 +1,29 @@
+.footer {
+    width: 100%;
+    background: $footer-background;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 80px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: $footer-text;
+    transition: color 0.25s, padding-left 0.25s;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+    padding-left: 6px;
+}
+
+.footer-column p {
+    color: $footer-text;
+}
