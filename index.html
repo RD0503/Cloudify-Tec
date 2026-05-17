@@ -6,34 +6,48 @@
     <title>Cloudify Tec</title>
 
     <link rel="stylesheet" href="css/main.css">
-
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="dark-mode" class="dark-mode-anchor" aria-hidden="true"></div>
 
     <!-- NAVBAR -->
     <header class="navbar">
 
-        <div class="logo">
-            <div class="logo-icon">C</div>
-
+        <a href="index.html" class="logo">
+            <div class="logo-icon">
+                <img src="assets/logo-oficial.png" alt="Cloudify Tec logo" class="logo-img light-logo" />
+                <img src="assets/logo%20modo%20oscuro.png" alt="Cloudify Tec dark logo" class="logo-img dark-logo" />
+            </div>
             <div class="logo-text">
                 cloudify <span>TEC</span>
             </div>
-        </div>
+        </a>
 
-        <nav class="nav-links">
+        <nav class="nav-links light">
             <a href="index.html">Inicio</a>
             <a href="Pages/nosotros.html">Nosotros</a>
             <a href="Pages/servicios.html">Servicios</a>
             <a href="Pages/reseñas.html">Reseñas</a>
             <a href="Pages/contacto.html">Contacto</a>
         </nav>
+        <nav class="nav-links dark">
+            <a href="index.html#dark-mode">Inicio</a>
+            <a href="Pages/nosotros.html#dark-mode">Nosotros</a>
+            <a href="Pages/servicios.html#dark-mode">Servicios</a>
+            <a href="Pages/reseñas.html#dark-mode">Reseñas</a>
+            <a href="Pages/contacto.html#dark-mode">Contacto</a>
+        </nav>
+
+        <button class="nav-toggle" aria-label="Abrir menú"><i class="bx bx-menu"></i></button>
 
         <div class="nav-icons">
-            <span>⌕</span>
-            <span>✉</span>
-            <span>👤</span>
+            <i class="bx bx-search"></i>
+            <i class="bx bx-envelope"></i>
+            <a href="#dark-mode" class="dark-mode-switch dark-on" aria-label="Activar modo oscuro"><i class="bx bx-moon"></i></a>
+            <a href="#" class="dark-mode-switch dark-off" aria-label="Desactivar modo oscuro"><i class="bx bx-sun"></i></a>
+            <i class="bx bx-user"></i>
         </div>
 
     </header>
@@ -99,7 +113,7 @@
 
         <div class="feature">
 
-            <h3>☁ En la nube</h3>
+            <h3><span class="feature-icon"><i class="bx bx-cloud"></i></span>En la nube</h3>
 
             <p>
                 Sistemas escalables y seguros para empresas modernas.
@@ -109,7 +123,7 @@
 
         <div class="feature">
 
-            <h3>⚡ Automatización</h3>
+            <h3><span class="feature-icon"><i class="bx bx-cog"></i></span>Automatización</h3>
 
             <p>
                 Menos tareas repetitivas y más productividad.
@@ -119,7 +133,7 @@
 
         <div class="feature">
 
-            <h3>📊 Reportes</h3>
+            <h3><span class="feature-icon"><i class="bx bx-bar-chart-alt-2"></i></span>Reportes</h3>
 
             <p>
                 Información clara para tomar mejores decisiones.
@@ -129,7 +143,7 @@
 
         <div class="feature">
 
-            <h3>🔒 Seguridad</h3>
+            <h3><span class="feature-icon"><i class="bx bx-shield"></i></span>Seguridad</h3>
 
             <p>
                 Protegemos tus datos y procesos empresariales.
@@ -157,10 +171,10 @@
 
             <h3>Navegación</h3>
 
-            <a href="#">Inicio</a>
-            <a href="#">Nosotros</a>
-            <a href="#">Servicios</a>
-            <a href="#">Contacto</a>
+            <a href="index.html">Inicio</a>
+            <a href="Pages/nosotros.html">Nosotros</a>
+            <a href="Pages/servicios.html">Servicios</a>
+            <a href="Pages/contacto.html">Contacto</a>
 
         </div>
 
@@ -185,5 +199,14 @@
 
     </footer>
 
-</body>
-</html>
+            <script>
+                document.addEventListener('DOMContentLoaded', function(){
+                    var navbar = document.querySelector('.navbar');
+                    var toggle = document.querySelectorAll('.nav-toggle');
+                    toggle.forEach(function(btn){ btn.addEventListener('click', function(){ navbar.classList.toggle('nav-open'); }); });
+                });
+            </script>
+
+
+    </body>
+    </html>
