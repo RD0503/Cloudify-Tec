@@ -90,4 +90,4 @@ Abrí el proyecto en VS Code, instalá la extensión Live Sass Compiler de Ritwi
 
 ## Autor
 
-Rodrigo — Proyecto final del curso Desarrollo Web Flex, CoderHouse 2025.
+Rodrigo Alfredo Vega — Proyecto final del curso Desarrollo Web Flex, CoderHouse 2026.
