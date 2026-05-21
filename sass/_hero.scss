@@ -54,15 +54,19 @@
     font-size: 1.25rem;
 }
 
-.primary-btn {
-    background: $primary-color;
-    color: white;
-    border: none;
+%btn-base {
     padding: 16px 28px;
     border-radius: 12px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+}
+
+.primary-btn {
+    @extend %btn-base;
+    background: $primary-color;
+    color: white;
+    border: none;
     transition: transform 0.25s, box-shadow 0.25s;
 }
 
@@ -74,13 +78,9 @@
 .primary-btn:active { transform: translateY(-1px); }
 
 .secondary-btn {
+    @extend %btn-base;
     background: transparent;
     border: 1px solid #d8dce5;
-    padding: 16px 28px;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
     transition: border-color 0.25s, transform 0.25s, background 0.25s, color 0.25s;
 }
 
